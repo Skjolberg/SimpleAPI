@@ -2,8 +2,8 @@ package net.shibacraft.api;
 
 public interface SimpleCore {
 
-    void getMessage();
+    String getMessage();
 
-    void setMessage();
+    void setMessage(String message);
 
 }
