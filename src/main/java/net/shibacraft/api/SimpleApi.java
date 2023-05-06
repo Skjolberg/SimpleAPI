@@ -5,7 +5,9 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 public final class SimpleApi {
 
+    @Inject
     private static SimpleCore simpleCore;
+    @Inject
     private static SimpleRegion simpleRegion;
 
     private SimpleApi() {
@@ -19,7 +21,15 @@ public final class SimpleApi {
         return instance;
     }
 
-    @Inject
+    public static SimpleCore getSimpleCore() {
+        return check(simpleCore);
+    }
+
+    public static SimpleRegion getSimpleRegion() {
+        return check(simpleRegion);
+    }
+
+    /*@Inject
     public static void setSimpleCore(SimpleCore core) {
         simpleCore = core;
     }
@@ -36,6 +46,6 @@ public final class SimpleApi {
 
     public static SimpleRegion getSimpleRegion() {
         return check(simpleRegion);
-    }
+    }*/
 
 }
