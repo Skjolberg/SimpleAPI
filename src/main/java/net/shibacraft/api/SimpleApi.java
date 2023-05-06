@@ -18,9 +18,9 @@ public final class SimpleApi {
         return check(simpleCore);
     }
 
-    @Inject
+    /*@Inject
     private static void setSimpleCore(SimpleCore core) {
         simpleCore = core;
-    }
+    }*/
 
 }
