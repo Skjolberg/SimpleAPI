@@ -19,12 +19,7 @@ public final class SimpleApi {
         return check(simpleCore);
     }
 
-    /*public static void initialize(SimpleCore core) {
-        simpleCore = core;
-    }*/
-
-    @Inject
-    private void setSimpleCore(SimpleCore core) {
+    public static void initialize(SimpleCore core) {
         simpleCore = core;
     }
 
