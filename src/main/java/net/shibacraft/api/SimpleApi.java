@@ -3,14 +3,10 @@ package net.shibacraft.api;
 import com.google.inject.Inject;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
-public class SimpleApi {
+public final class SimpleApi {
 
     @Inject
     private static SimpleCore simpleCore;
-
-    public SimpleApi() {
-
-    }
 
     private static <T> T check(@Nullable T instance) {
         if (instance == null) {
@@ -19,9 +15,12 @@ public class SimpleApi {
         return instance;
     }
 
-
     public static SimpleCore getSimpleCore() {
         return check(simpleCore);
+    }
+
+    public static void initialize(SimpleCore core) {
+        simpleCore = core;
     }
 
 }
