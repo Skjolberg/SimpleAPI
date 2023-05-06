@@ -20,7 +20,7 @@ public final class SimpleApi {
     }
 
     @Inject
-    private static void setSimpleCore(SimpleCore core) {
+    public static void setSimpleCore(SimpleCore core) {
         simpleCore = core;
     }
 
@@ -30,7 +30,7 @@ public final class SimpleApi {
 
 
     @Inject
-    private static void setSimpleRegion(SimpleRegion region) {
+    public static void setSimpleRegion(SimpleRegion region) {
         simpleRegion = region;
     }
 
