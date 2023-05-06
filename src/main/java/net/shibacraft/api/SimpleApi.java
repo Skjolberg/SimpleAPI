@@ -5,7 +5,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 public final class SimpleApi {
 
-    @Inject
+    //@Inject
     private static SimpleCore simpleCore;
 
     private static <T> T check(@Nullable T instance) {
@@ -19,7 +19,12 @@ public final class SimpleApi {
         return check(simpleCore);
     }
 
-    public static void initialize(SimpleCore core) {
+    /*public static void initialize(SimpleCore core) {
+        simpleCore = core;
+    }*/
+
+    @Inject
+    private void setSimpleCore(SimpleCore core) {
         simpleCore = core;
     }
 
